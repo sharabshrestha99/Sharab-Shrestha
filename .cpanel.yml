@@ -1,0 +1,6 @@
+version: 2
+deployment:
+  type: git
+  repository: https://github.com/sharabshrestha99/Sharab-Shrestha
+  branch: main
+  docroot: /home/sarabsh1/public_html
