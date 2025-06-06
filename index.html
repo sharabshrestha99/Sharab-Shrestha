@@ -1,12 +1,235 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ne">
 <head>
-  <meta charset="UTF-8">
-  <title>Coming Soon - Sarab Shrestha</title>
+  <meta charset="UTF-8" />
+  <title>छिट्टै आउँदैछ - शारब श्रेष्ठ</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f8f8;
+      color: #333;
+      padding: 40px;
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.6;
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: #222;
+      text-align: center;
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 40px;
+    }
+    a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    hr {
+      margin: 30px 0;
+      border: none;
+      border-top: 1px solid #ccc;
+    }
+    p, li {
+      font-size: 1rem;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+    .lang-toggle {
+      text-align: right;
+      margin-bottom: 20px;
+    }
+    .lang-toggle button {
+      background: none;
+      border: 1px solid #aaa;
+      padding: 5px 10px;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+    .english {
+      display: none;
+      text-transform: lowercase;
+    }
+  </style>
 </head>
 <body>
-  <h1>🌟 Coming Soon 🌟</h1>
-  <p>This is the future home of Sarab Shrestha’s website.</p>
-  <p>I’m still working on it, but you can check out the <a href="/beta">Beta version</a> if you’re curious.</p>
+
+  <div class="lang-toggle">
+    <button id="toggleBtn" onclick="toggleLang()">english</button>
+  </div>
+
+  <!-- Nepali Version (Default) -->
+  <div class="nepali" id="nepali">
+    <h1>🌟 छिट्टै आउँदैछ 🌟</h1>
+
+    <p><strong>शारब श्रेष्ठ</strong>को व्यक्तिगत वेबसाइटमा स्वागत छ — सिर्जनशीलता, कोड, कविता, चिया, र गफको डिजिटल ठेगाना।</p>
+
+    <p>वेबसाइट निर्माणाधीन अवस्थामा छ। आफैंले बनाउँदै छु — पंक्ति पंक्तिमा, बग बगमा, अनि चिया चियामा।</p>
+
+    <p>धेरै कौतूहल भएमा <a href="/beta">बेटा संस्करण</a> हेर्न सक्नुहुन्छ।</p>
+
+    <hr>
+
+    <h2>⏳ तपाईंसम्म वेबसाइट आउन बाँकी छ:</h2>
+    <p id="countdown-nepali" style="font-weight:bold; font-size:1.2rem;"></p>
+
+    <hr>
+
+    <h2>📢 जागिर खुल्ला — तलब छैन 😅</h2>
+
+    <p>
+      तपाईं कोड लेख्न सक्नुहुन्छ? लेख लेख्न सक्नुहुन्छ? गफ हान्न सक्नुहुन्छ?
+      म “हायर” गर्दैछु — जसको तलब रु ०.०० छ 😆
+    </p>
+
+    <ul>
+      <li>🔧 अनुभव छैन भने पनि हुन्छ, आत्मविश्वास चाहिन्छ</li>
+      <li>💸 तलब: रु ०.०० (ठट्टा होइन!)</li>
+      <li>🎁 सुविधा: मजा, सिर्जनात्मक स्वतन्त्रता, अनि मेरो धन्यवाद</li>
+      <li>📣 आवेदन दिने तरिका: <a href="mailto:info@sharabshrestha.com.np">यहाँ इमेल पठाउनुहोस्</a></li>
+    </ul>
+
+    <hr>
+
+    <h2>🧘 आजको मूड:</h2>
+    <p id="mood-nepali" style="font-style: italic; font-weight: bold;"></p>
+
+    <hr>
+
+    <footer>
+      🇳🇵 © २०२५ शारब श्रेष्ठ। यो वेबसाइट नेपालमै सिर्जना गरिएको हो — मनदेखि कोडसम्म।
+    </footer>
+  </div>
+
+  <!-- English Version -->
+  <div class="english" id="english">
+    <h1>🌟 coming soon 🌟</h1>
+
+    <p>welcome to the personal website of sharab shrestha — a digital home for creativity, code, poetry, tea, and chaos.</p>
+
+    <p>the site is still under construction. i’m building it by myself — line by line, bug by bug, cup by cup of tea.</p>
+
+    <p>too curious? check the <a href="/beta">beta version</a>.</p>
+
+    <hr>
+
+    <h2>⏳ time left until launch:</h2>
+    <p id="countdown-english" style="font-weight:bold; font-size:1.2rem;"></p>
+
+    <hr>
+
+    <h2>📢 hiring... but no salary 😅</h2>
+
+    <p>
+      can you code? write? meme? i’m “hiring” — but the salary is रु 0.00 (yes, seriously).
+    </p>
+
+    <ul>
+      <li>🔧 experience? not required. attitude? absolutely.</li>
+      <li>💸 salary: रु 0.00 (no kidding)</li>
+      <li>🎁 perks: fun, creativity, and my eternal thanks</li>
+      <li>📣 how to apply: <a href="mailto:info@sharabshrestha.com.np">send email here</a></li>
+    </ul>
+
+    <hr>
+
+    <h2>🧘 mood of the day:</h2>
+    <p id="mood-english" style="font-style: italic; font-weight: bold;"></p>
+
+    <hr>
+
+    <footer>
+      🇳🇵 © 2025 sharab shrestha. handmade in nepal — from heart to html.
+    </footer>
+  </div>
+
+  <script>
+    // Language toggle logic
+    function toggleLang() {
+      const np = document.getElementById('nepali');
+      const en = document.getElementById('english');
+      const btn = document.getElementById('toggleBtn');
+
+      if (np.style.display === 'none') {
+        np.style.display = 'block';
+        en.style.display = 'none';
+        btn.textContent = 'english';
+      } else {
+        np.style.display = 'none';
+        en.style.display = 'block';
+        btn.textContent = 'नेपाली';
+      }
+    }
+
+    // Show Nepali by default
+    document.getElementById('nepali').style.display = 'block';
+    document.getElementById('english').style.display = 'none';
+
+    // Countdown Timer
+    const launchDate = new Date('2025-07-01T00:00:00'); // Adjust as needed
+
+    function updateCountdown() {
+      const now = new Date();
+      let diff = launchDate - now;
+
+      if (diff < 0) {
+        diff = 0;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      const countdownNp = `${days} दिन ${hours} घण्टा ${minutes} मिनेट ${seconds} सेकेन्ड`;
+      const countdownEn = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
+
+      document.getElementById('countdown-nepali').textContent = countdownNp;
+      document.getElementById('countdown-english').textContent = countdownEn;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    // Mood of the Day - random quotes in Nepali and English
+
+    const moodsNp = [
+      "आज पनि चिया पिएर सुरू गरियो।",
+      "वेबसाइटभन्दा जीवन गाह्रो छ।",
+      "कोड लेख्न मन छैन, तर लेख्नैपर्छ।",
+      "सुत्न मन लाग्यो तर IDE खुलिरहेको छ।",
+      "बग भेटियो भने चिया खा।",
+      "हामीले सिक्नै पर्छ, अनि लेख्न पर्छ।"
+    ];
+
+    const moodsEn = [
+      "started the day with a cup of tea.",
+      "life is harder than coding.",
+      "don’t wanna code, but gotta code.",
+      "wanted to sleep, but ide was open.",
+      "found a bug? take a tea break.",
+      "we must learn, and then write."
+    ];
+
+    function setMood() {
+      const moodIndex = Math.floor(Math.random() * moodsNp.length);
+      document.getElementById('mood-nepali').textContent = moodsNp[moodIndex];
+      document.getElementById('mood-english').textContent = moodsEn[moodIndex];
+    }
+
+    setMood();
+
+  </script>
 </body>
 </html>
